@@ -4,7 +4,7 @@ import Transactions from "../../pages/Transactions";
 import Insights from "../../pages/Insights";
 
 const Layout = () => {
-  // 🔹 Load saved preferences
+ 
   const [page, setPage] = useState("dashboard");
   const [role, setRole] = useState(
     localStorage.getItem("role") || "viewer"
@@ -13,7 +13,7 @@ const Layout = () => {
     JSON.parse(localStorage.getItem("dark")) || false
   );
 
-  // 🔹 Persist settings
+
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(dark));
     localStorage.setItem("role", role);
